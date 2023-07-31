@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>使用 Hooks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <script src="/javascripts/vendor.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"
+        integrity="sha512-1/8Tj23BRrWnKZXeBruk6wTnsMJbi/lJsk9bsRgVwb6j5q39n0A00gFjbCTaDo5l5XrPVv4DZXftrJExhRF/Ug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="bg-lighter">
+    <div class="container main my-5">
+        <div class="row">
+            <main class="col post">
+                <!-- 章節標題 -->
+                <div class="mb-4">
+                    <h1 class="mt-0 text-muted">使用 useState 更新資料狀態</h1><small>檔名：<code>01.html</code></small>
+                </div>
+                <!-- 根元素 -->
+                <div id="root"></div>
+                <script type="text/babel">
+                    // #1 取出 useState 的方法
+                    const { useState } = React;
+
+                    const App = () => {
+                        // #2 定義狀態
+                        // let num = 0;
+                        // 陣列的參數[前者是一個變數,後者是一個寫入變數的方法]
+                        // useState(0),預設值為0
+                        const [num, setNum] = useState(0);
+
+                        return (<div>
+                            {num}
+                            <button onClick={() => {
+                                // num++;                                
+                                {/* 使用 set 將值寫入 */ }
+                                // 使用useState方法,前者變數是唯獨的,所以要用後者變數setNum來修改
+                                setNum(num + 1);
+                            }}>{num}</button>
+                        </div>)
+                    }
+
+                    ReactDOM.createRoot(document.querySelector('#root'))
+                        .render(<App />)
+                </script>
+
+            </main>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</body>
+
+</html>
