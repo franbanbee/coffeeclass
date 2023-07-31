@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 實作:更改h1標籤的內容與css -->
+    <h1 id="myH1">標題一</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, natus?</p>
+    <script>
+        //取得
+        let h1Element=document.querySelector('#myH1');
+        // 更改內容
+        h1Element.innerHTML='新標籤'
+        // 更感類別名稱
+        h1Element.className='myClass'
+        // css字體放大
+        h1Element.style.fontSize='50px'
+        // css色彩
+        h1Element.style.color='skyblue'
+    </script>
+</body>
+</html>

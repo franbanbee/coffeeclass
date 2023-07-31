@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="myBodyId" class="myBodyClass">
+    <script>
+        // 取得網址
+        console.log('網址'+window.location.href);
+        // 更改網址列的內容，會發生跳轉
+        // window.location.href='https://google.com'
+        
+        // 更改網頁標題
+        document.title='my web';
+
+        // 更改body標籤
+        document.body.innerHTML='Hello';
+
+        // 更改body id 名稱
+        console.log(document.body.id);
+        console.log(document.body.className);
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 物件object -->
+    <!-- 1.物件的基本概念
+            1-1封裝其他資料的容器
+            1-2建立物件
+            1-3使用物件 -->
+
+    <script>
+        // 一般函式建立sayHi()
+        // function sayHi(){
+        //     console.log('Hi');
+        // }
+        // sayHi();
+
+        // 物件建立方式
+        // let sayHi2=function(){
+        //     console.log('Hello');
+        // }
+        // sayHi2();
+        /*
+                // 1.建立空白物件
+                let obj1 = new Object();
+                console.log(obj1);
+                // 建立物件的成員
+                // 屬性
+                obj1.x=3; //let x=3
+                obj1.y=4;
+                console.log(obj1);
+        
+                // 方法(函式)
+                obj1.sayHi=function(){
+                    console.log('Hi');
+                }
+                console.log(obj1);
+                */
+
+        // 使用物件的成員
+        // 看全部
+        // console.log(obj1);
+        // console.log(obj1.x);
+        // console.log(obj1.y);
+        // console.log(obj1.sayHi);
+
+        // 使用this關鍵字注意事項
+        // 必須在物件的方法中使用
+        let obj2 = new Object();
+        obj2.x = 3;
+        obj2.y = 4;
+        obj2.sayHi = function () {
+            console.log('Hi');
+            console.log(obj2.x);
+            console.log(this.y);
+        }
+        obj2.sayHi();
+
+    </script>
+</body>
+
+</html>

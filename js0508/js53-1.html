@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片覆蓋效果 遮色區</title>
+    <style>
+        .imgbox,.imgbox2,.imgbox3,.imgbox4,.imgbox5 {
+            /* border: 1px solid red; */
+            position: relative;
+            /* 與圖片同寬高 */
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+        }
+        .imgbox img,.imgbox2 img,.imgbox3 img ,.imgbox4 img , .imgbox5 img{
+            position: absolute;
+        }
+        .imgbox .mask,.imgbox2 .mask2{
+            position: absolute;
+            background-color: black;
+            /* 用rgba調透明度也可以 */
+            /* background-color: rgba(0, 0,0,.5); */
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            /* 用透明度調整 */
+            opacity: 0;
+            transition: all .5s;
+        }
+        .imgbox .mask a,
+        .imgbox .mask a
+        .imgbox .mask a
+        .imgbox .mask a
+        .imgbox .mask a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 碰到imgbox的時候mask遮色區做變化 */
+        .imgbox:hover .mask
+        .imgbox2:hover .mask2
+        .imgbox3:hover .mask3
+        .imgbox4:hover .mask4
+        .imgbox5:hover .mask5{
+            opacity: .5;
+        }
+        
+        /* test */
+        /* 第二個 */
+        /* 左到右覆蓋 */
+        
+    
+
+        .imgbox2 .mask2{
+            position: absolute;
+            background-color: black;
+            /* 用rgba調透明度也可以 */
+            /* background-color: rgba(0, 0,0,.5); */
+            width: 0px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            /* 用透明度調整 */
+            opacity: 0;
+            transition: all .5s;
+        }
+        .imgbox2 .mask2 a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 碰到imgbox的時候mask遮色區做變化 */
+        .imgbox2:hover .mask2{
+            opacity: .5;
+            /* transform:translate(30px,0) ; */
+            width: 100%;
+        }
+
+        /* test */
+        /* 第三個 */
+        /* 上到下覆蓋 */
+        
+        
+        .imgbox3 .mask3{
+            position: absolute;
+            background-color: black;
+            /* 用rgba調透明度也可以 */
+            /* background-color: rgba(0, 0,0,.5); */
+            width: 200px;
+            height: 0px;
+            text-align: center;
+            line-height: 200px;
+            /* 用透明度調整 */
+            opacity: 0;
+            transition: all .5s;
+        }
+        .imgbox3 .mask3 a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 碰到imgbox的時候mask遮色區做變化 */
+        .imgbox3:hover .mask3{
+            opacity: .5;
+            /* transform:translate(0,30px) ; */
+            height: 100%;
+        }
+
+        /* test */
+        /* 第四個 */
+        /* 內到外覆蓋 */
+        
+        
+        .imgbox4 .mask4{
+            position: absolute;
+            background-color: black;
+            /* 用rgba調透明度也可以 */
+            /* background-color: rgba(0, 0,0,.5); */
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            /* 用透明度調整 */
+            opacity: 0;
+            transition: all 1s;
+            transform: scale(0,0);
+        }
+        .imgbox4 .mask4 a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 碰到imgbox的時候mask遮色區做變化 */
+        .imgbox4:hover .mask4{
+            opacity: .5;
+            transform:scale(1,1);
+    
+        }
+
+        /* test */
+        /* 第5個 */
+        /* 內到外覆蓋 */
+        
+        
+        .imgbox5 .mask5{
+            position: absolute;
+            background-color: black;
+            /* 用rgba調透明度也可以 */
+            /* background-color: rgba(0, 0,0,.5); */
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            /* 用透明度調整 */
+            opacity: 0;
+            transition: all 1s;
+            transform: scale(0,0)rotate(150deg);
+            z-index: 99;
+            
+        }
+        .imgbox5 .mask5 a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 碰到imgbox的時候mask遮色區做變化 */
+        .imgbox5:hover .mask5{
+            opacity: .5;
+            transform:scale(1,1);
+    
+        }
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    <!--  imgbox建立一個對齊的基準點 -->
+    <!-- 可在前面再加一區 box imgbox -->
+    <div class="imgbox">
+        <p>原本</p>
+        <!-- 圖 -->
+        <img src="img/哞生捲_原味.png" alt="" width="200" height="200">
+        <!-- 遮色區 -->
+        <div class="mask">
+            <a href="">MORE</a>
+        </div>
+    </div>
+    <div class="imgbox2">
+        <p>左到右覆蓋</p>
+        <!-- 圖 -->
+        <img src="img/哞生捲_草莓.png" alt="" width="200" height="200">
+        <!-- 遮色區 -->
+        <div class="mask2">
+            <a href="">MORE</a>
+        </div>
+    </div>
+    <div class="imgbox3">
+        <p>上到下覆蓋</p>
+        <!-- 圖 -->
+        <img src="img/哞生捲_巧克力.png" alt="" width="200" height="200">
+        <!-- 遮色區 -->
+        <div class="mask3">
+            <a href="">MORE</a>
+        </div>
+    </div>
+    <div class="imgbox4">
+        <p>內到外覆蓋</p>
+        <!-- 圖 -->
+        <img src="img/哞生捲_原味.png" alt="" width="200" height="200">
+        <!-- 遮色區 -->
+        <div class="mask4">
+            <a href="">MORE</a>
+        </div>
+    </div>
+
+    <p>旋轉+內到外覆蓋</p>
+    <div class="imgbox5">
+        
+        <!-- 圖 -->
+        
+        <img src="img/哞生捲_巧克力.png" alt="" width="200" height="200">
+        <!-- 遮色區 -->
+        <div class="mask5">
+            <a href="">MORE</a>
+        </div>
+    </div>
+</body>
+
+</html>

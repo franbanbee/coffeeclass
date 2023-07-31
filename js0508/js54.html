@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    箭頭函式 Arrow Function <br>
+    核心的結構 <br>
+    1.函式的本體<br>
+    2.函式的參數<br>
+    3.函式的回傳值 return<br>
+    <p></p>
+    語法 <br>
+    一般的寫法 <br>
+    <script>
+        function 函數名稱(參數列表) {
+            函式區塊內部的程式碼
+            return 回傳值;
+        }
+    </script>
+    <p></p>
+    一般的寫法二
+    <script>
+        let 函數名稱 = function (參數列表) {
+            函式區塊內部的程式碼
+            return 回傳值;
+        }
+    </script>
+    <p> </p>
+    箭頭函式寫法ES6 <br>
+    function拿掉換成=> 一個箭頭符號
+    <script>
+        let 函數名稱 = (參數列表) => {
+            函式區塊內部的程式碼
+            return 回傳值;
+        }
+    </script>
+    <br>
+    <p></p>
+    let 函數名稱 = (參數列表) => { <br>
+    函式區塊內部的程式碼 <br>
+    return 回傳值;<br>
+    }<br>
+
+    <p></p>
+
+    <script>
+        // 寫法1
+        function add1(n1, n2) {
+            let result = n1 + n2;
+            return result;
+        }
+        let ans1 = add1(3, 5);
+        console.log(ans1);
+        // 寫法2
+        let add2 = function (n1, n2) {
+            let result = n1 + n2;
+            return result;
+        }
+        let ans2 = add1(3, 5);
+        console.log(ans2);
+        // 寫法3
+        let add3 = (n1, n2) => {
+            let result = n1 + n2;
+            return result;
+        }
+        let ans3 = add1(3, 5);
+        console.log(ans3);
+
+
+
+
+        
+    </script>
+    
+
+
+    
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇出現相對應資料</title>
+    <style>
+        a {
+            color: red;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#" onclick="changeToAbout()" ;>關於我</a>
+        <a href="#" onclick="changeToExps()" ;>學經歷</a>
+
+        <hr>
+        <div id="about">
+            關於我
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, error.
+        </div>
+        <div id="exps">
+            學經歷
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, error.
+        </div>
+        <script>
+            // 取得標籤物件
+            let aboutDiv = document.querySelector('#about');
+            let aboutExps = document.querySelector('#exps');
+            function changeToAbout() {
+                // alert('changeToAbout');
+                // 操作標籤物件
+                aboutDiv.style.display = 'block';
+                aboutExps.style.display = 'none';
+            }
+            function changeToExps() {
+                // 操作標籤物件
+                aboutDiv.style.display = 'none';
+                aboutExps.style.display = 'block';
+            }
+        </script>
+    </div>
+</body>
+
+</html>

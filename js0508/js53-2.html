@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件處理</title>
+    <style>
+        marquee{
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    事件處理 <br>
+    1.在什麼標籤上<br>
+    2.發生什麼事(一種行為)<br>
+    3.做什麼事<br>
+    
+<marquee onmouseover="stop();"onmouseout="start()">123</marquee>
+<button 
+onclick="console.log('onclick')"
+onmouseover="console.log('onmpuseover')"
+onmouseout="console.log('onmouseout')"
+onmousedown="console.log('onmousedown')"
+onmouseup="console.log('onmouseup')"
+onmousemove="console.log('onmousemove')"
+>打招呼</button>
+<hr>
+<p></p>
+<br>
+常見事件種類<br>
+1.左鍵一下的時候onclick<br>
+2.滑鼠移入onmouseover <br>
+3.滑鼠移開onmouseout <br>
+4.滑鼠按一下不放的時候onmousedown<br>
+5.滑鼠放開的時候onmouseup<br>
+6.滑鼠移動的時候onmousemove <br>
+<hr>
+<p></p>
+尋找標籤 function <br>
+
+
+<button onclick="sayHi()">打招呼</button>
+<div id="showmsg"></div>
+<script>
+    // 透過別人處理 
+    function sayHi(){
+        console.log('Hi');
+        // 尋找標籤
+        document.querySelector('#showmsg').innerHTML='Hi'
+    }
+</script>
+<hr>
+第二種寫法 <br>
+elem.innerHTML='Hi2'; <br>
+改在原本身上 <br>
+<button onclick="sayHi2(this)">打招呼2</button>
+<div id="showmsg2"></div>
+<script>
+    function sayHi2(elem){      
+        elem.innerHTML='Hi2';
+        
+    }
+</script>
+另一種寫法 處理自己 <br>
+ <br>
+<button >打招呼21</button>
+<div onclick="sayHi(tjis)" id="showmsg211">123</div>
+<script>
+    function sayHi21(elem){      
+        elem.innerHTML='Hi21';
+        
+    }
+</script>
+<hr>
+ 第二種事件處理方式 <br>
+ 表單底色變化 <br>
+<button
+onmousedown="down(this);"
+onmouseup="up(this);"
+>變色</button>
+
+<script>
+function down(elem){
+    elem.style.color='red';
+}
+function up(elem){
+    elem.style.color='black';
+}
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 實作物件練習 -->
+    <script>
+        // 建立一個以人為主的物件
+        // 物件中包含以下成員
+        // 姓名 身高 體重 年齡 自我介紹的函式
+        // 自我介紹的函式(HELLO,我是XXX，今年幾歲)
+
+        let obj1 = new Object();
+        obj1.name = 'Jenny';
+        obj1.height = 170;
+        obj1.weight = 50;
+        obj1.age = 22;
+        obj1.self = function () {
+            console.log('HELLO,我是' + obj1.name + ',今年' + obj1.age + '歲');
+            // console.log('HELLO,我是Amy，今年20歲');
+        }
+        // obj1.self('HELLO,我是'+obj1.name+',今年'+obj1.age+'歲');
+        obj1.self();
+
+
+        // 建立一個函式計算bmi,並顯示出來
+        // bmi=體重/身高(公尺)的平方
+
+        let bmi = new Object();
+        bmi.height = 170;
+        bmi.weight = 50;
+        
+        bmi.bmi=function(){
+            console.log( (bmi.weight/((bmi.height/100)*(bmi.height/100))));
+        }
+        bmi.bmi();
+
+        let mybmi=Math.round(bmi.weight/((bmi.height/100)*(bmi.height/100)));
+        console.log(mybmi);
+        if(mybmi<18.5){
+            console.log('過輕')
+        }else if(mybmi>=18.5 && mybmi<24){
+            console.log('正常')
+        }else if(mybmi>24){
+            console.log('過重')
+        }
+
+    </script>
+
+</body>
+
+</html>

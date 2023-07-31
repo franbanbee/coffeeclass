@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 使用json物件建立方法
+        // 語法:
+        /*
+        {
+            成員名稱1:資料1,
+            成員名稱2:資料2,
+        }
+        */
+
+        // 建立JSON物件
+        // let obj1={
+        //     name:'Amy',
+        //     age:20,
+        //     sayHi:function(){
+        //         console.log('Hi');
+        //     },
+        //     height:170,
+        //     weight:50
+        // };
+
+        // 使用物件
+        // console.log(obj1.name);
+        // console.log(obj1.height);
+        // obj1.sayHi();
+
+        // 計算BMI
+        let bmi={
+            h:170,
+            w:50,
+            mybmi:function(){
+                // 使用平方
+                console.log=bmi.w/Math.pow((bmi.h/100),2);
+                // console.log(bmi.w/((bmi.h/100)*(bmi.h/100)))
+            }
+        };
+        bmi.mybmi();
+        console.log(bmi.h);
+        console.log(bmi.w);
+
+
+    </script>
+</body>
+
+</html>
