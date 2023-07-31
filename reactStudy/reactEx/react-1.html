@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>環境安裝</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="images/favicon.ico" rel="shortcut icon">
+  <meta charset="UTF-8">
+  <script src="/javascripts/vendor.js"></script>
+</head>
+
+<body class="bg-lighter">
+  <div class="container main my-5">
+    <div class="row">
+      <main class="col post">
+        <!-- 章節標題 -->
+        <div class="mb-4">
+          <h1 class="mt-0 text-muted">環境安裝</h1><small>檔名：<code>react-1.html</code></small>
+        </div>
+        <!-- 練習開始 -->
+
+        <!-- 步驟一：載入React, Bable -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <!-- 步驟二：載入root元素 根路徑 -->
+        <div id="root">
+
+        </div>
+        <!-- 使用JSX，type類型為 "text/babel" -->
+        <script type="text/babel">
+          // 步驟三：檢查資源是否載入
+          // console.log(`react:${React},reactDOM:${ReactDOM}`)
+          // 步驟四：建立 React 元件 元件名稱字首要大寫
+          function App(){
+            return <h1>React 我來了</h1>
+          }
+          // 步驟五：渲染元件到根元件上 結尾要變成<App/>
+          const el=document.getElementById('root');
+          const root = ReactDOM.createRoot(el);
+          root.render(<App/>);
+        </script>
+
+        <!-- 練習結束 -->
+      </main>
+    </div>
+  </div>
+  <link rel="stylesheet" href="/stylesheets/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</body>
+
+</html>

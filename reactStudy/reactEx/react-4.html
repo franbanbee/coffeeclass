@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSX 與 HTML 的標籤屬性</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <script src="/javascripts/vendor.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"
+        integrity="sha512-1/8Tj23BRrWnKZXeBruk6wTnsMJbi/lJsk9bsRgVwb6j5q39n0A00gFjbCTaDo5l5XrPVv4DZXftrJExhRF/Ug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="bg-lighter">
+    <div class="container main my-5">
+        <div class="row">
+            <main class="col post">
+                <!-- 章節標題 -->
+                <div class="mb-4">
+                    <h1 class="mt-0 text-muted">JSX 與 HTML 的標籤屬性</h1><small>檔名：<code>react-4.html</code></small>
+                </div>
+                <!-- 練習開始 -->
+                <div id="root"></div>
+                <script type="text/babel">
+                    function App() {
+                        const htmlTemplate = {
+                            _html: '<div>這裡有一段文字</div>'
+                        }
+
+                        return (
+                            <div>
+                                {/* className */}
+                                <div><button type="button" className="btn btn-primary">Primary</button></div>
+                                {/* checked 與 結尾標籤 */}
+                                <div><input type="checkbox" defaultChecked /></div>
+                                {/* defaultValue & value */}
+                                <div><input type="text" defaultValue="xxx" /></div>
+                                {/* htmlFor */}
+                                <div>
+                                    <label htmlFor="email">請輸入 Email</label>
+                                    <input type="email" id="email" />
+                                </div>
+                                {/* selected */}
+                                <div>
+                                    <select name="" id="" defaultValue="2">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                { /* textarea */}
+                                <div>
+                                    <textarea name="" id="" cols="30" rows="5" defaultValue="這裡可以放多行文字"></textarea>
+                                </div>
+                                {/* dangerouslySetInnerHTML */}
+                                <div dangerouslySetInnerHTML={htmlTemplate}>
+                                </div>
+                                {/* onChange =>取得異動的次數*/}
+                                <div><input type="text" onChange={
+                                    // 沒有名稱的函式,稱之為匿名函式
+                                    function () {
+                                        console.log('更改內容了');
+                                    }} />
+                                </div>
+                                {/* onChange =>取得內容*/}
+                                <div><input type="text" onChange={
+                                    // 沒有名稱的函式,稱之為匿名函式
+                                    function (event) {
+                                        console.log(event.targrt.value);
+                                    }} />
+                                </div>
+                            </div>
+                        );
+                    }
+
+                    const el = document.getElementById('root');
+                    const root = ReactDOM.createRoot(el);
+                    root.render(<App />);
+                </script>
+
+                <hr>
+                <!-- 將此片段的 HTML 轉為 React JSX -->
+                <div>
+                    <div><button type="button" class="btn btn-primary">Primary</button></div>
+                    <div><input type="checkbox" checked /></div>
+                    <div><input type="text" value="xxx" /></div>
+                    <div>
+                        <label for="email">請輸入 Email</label>
+                        <input type="email" id="email" />
+                    </div>
+                    <div>
+                        <select name="" id="">
+                            <option value="1">1</option>
+                            <option value="2" selected="">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea name="" id="" cols="30" rows="5">這裡可以放多行文字</textarea>
+                    </div>
+                    <div>
+                        <div>這裡有一段文字</div>
+                    </div>
+                    <div><input type="text" /></div>
+                </div>
+                <!-- 練習結束 -->
+            </main>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</body>
+
+</html>

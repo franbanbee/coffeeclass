@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ES6 縮寫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="images/favicon.ico" rel="shortcut icon">
+  <meta charset="UTF-8">
+  <script src="/javascripts/vendor.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"
+    integrity="sha512-1/8Tj23BRrWnKZXeBruk6wTnsMJbi/lJsk9bsRgVwb6j5q39n0A00gFjbCTaDo5l5XrPVv4DZXftrJExhRF/Ug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="bg-lighter">
+  <div class="container main my-5">
+    <div class="row">
+      <main class="col post">
+        <!-- 章節標題 -->
+        <div class="mb-4">
+          <h1 class="mt-0 text-muted">ES6 縮寫</h1><small>檔名：<code>02-1-ex.html</code></small>
+          <div class="alert bg-light">利用 ES6 或其縮寫的形式撰寫</div>
+        </div>
+        <ul>
+          <li>List1</li>
+          <li>List2</li>
+          <li>List3</li>
+        </ul>
+
+        <script type="text/babel">
+          // JSX：
+          // JSX 是一種 JavaScript 的語法擴展，它允許你在 JavaScript 中撰寫類似 HTML 的程式碼。
+          // 使用 JSX，你可以在組件中輕鬆地編寫元素、屬性和事件處理函式。
+          // JSX 在編譯時會被轉換為普通的 JavaScript。
+          // 練習區
+          // #組件縮寫
+          // const myName='物件';
+          // const obj={
+          //   myName:'物件',
+          //   fn:function(){
+          //     return this.myName
+          //   }
+          // }
+          // console.log(myName);
+          // console.log(obj.fn());
+
+          // #物件字面值
+          // const obj2={
+          //   myName:'物件2',
+          // fn:function(){
+          //   return this.myName
+          // }
+          // 簡化
+          //   fn(){
+          //     return this.myName
+          //   }
+          // }
+          // console.log(obj2.fn());
+
+          // #物件內的變數
+          // 原js寫法
+          // const person={
+          //   name:'ooxx'
+          // }
+          // console.log(person);
+
+          // 改jsx寫法
+          // const name = 'ooxx';
+          // function fn(){
+          //     return this.name;
+          //   }
+          // const person = {
+          //   // name:name,
+          //   name, //物件字面值情況下,遇到相同名稱可以省略不寫
+          //   fn
+          //   }
+
+          // console.log(fn);
+
+          // #展開 - 不同陣列合併
+          // const GroupA = ['ga01', 'ga02', 'ga03'];
+          // const GroupB = ['gb01', 'gb02'];
+          // 使用陣列合併語法
+          // const GroupC = GroupA.concat(GroupB);
+          // console.log(GroupC);
+
+          // 使用展開語法
+          // const GroupD=[...GroupA,...GroupB];
+          // console.log(GroupD);
+
+          // #展開 - 物件展開
+          // const methods={
+          //   fn1(){
+          //     console.log(1);
+          //   },
+          //   fn2(){
+          //     console.log(2);
+          //   }
+          // }
+
+          // 縮寫
+          // 新增另一個物件(包含methods物件)
+          // const newMethods={
+          // 使用物件展開時,可以保留原有的methods物件成員
+          //   ...methods,
+          //   fn3(){
+          //     console.log(3);
+          //   }
+          // }
+          // console.log(newMethods);
+          // newMethods.fn3();
+          // console.log(methods);
+
+          // 原本要寫這麼多
+          // 會破壞原有的物件內容
+          // const newMethods= methods;
+          // console.log(newMethods);
+          // newMethods.fn3=function(){
+          //   console.log(3);
+          // }
+          // console.log(newMethods);
+          // console.log(methods);
+
+          // 將原本dom元素轉成陣列
+          // const doms = document.querySelectorAll('li');
+          // console.log(doms);
+          // 轉成陣列
+          // const newDoms=[...doms];
+          // console.log(newDoms);
+          // 印出陣列的內容(dom元素)
+          // newDoms.map((e)=>{
+          //   console.log(e);
+            // 顯示li內容,以下三個都可以顯示
+          //   console.log(e.innerHTML);
+          //   console.log(e.innerText);
+          //   console.log(e.textContent);
+          // })
+
+          // #參數預設值 b=1 ,為了呼叫函式時,缺少了參數時可使用
+          function sum(a,b=1){
+            return a+b;
+          }
+          console.log(sum(5,3)); //a=5 b=3
+          console.log(sum(5));  //a=5 b=3
+
+
+
+
+
+        </script>
+
+      </main>
+    </div>
+  </div>
+  <link rel="stylesheet" href="/stylesheets/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</body>
+
+</html>

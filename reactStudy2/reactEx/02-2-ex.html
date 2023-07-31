@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>解構</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <script src="/javascripts/vendor.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"
+        integrity="sha512-1/8Tj23BRrWnKZXeBruk6wTnsMJbi/lJsk9bsRgVwb6j5q39n0A00gFjbCTaDo5l5XrPVv4DZXftrJExhRF/Ug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="bg-lighter">
+    <div class="container main my-5">
+        <div class="row">
+            <main class="col post">
+                <!-- 章節標題 -->
+                <div class="mb-4">
+                    <h1 class="mt-0 text-muted">解構</h1><small>檔名：<code>02-2-ex.html</code></small>
+                </div>
+
+                <div id="root"></div>
+                <script type="text/babel">
+                    // 練習區
+                    // 解構的進階與應用
+                    // const person={
+                    //     name:'小叮噹',
+                    //     age:10,
+                    //     like:'銅鑼燒'
+                    // }
+                    // 一般的寫法
+                    // const name=person.name;
+                    // const age=person.age;
+                    // const like=person.like;
+                    // console.log(name,age,like);
+
+                    // 物件解構的寫法
+                    // const {name,age}=person;
+                    // console.log(name,age);
+
+                    // 陣列
+                    // const arr1=['p1','p2','p3'];
+
+                    // 一般的寫法
+                    // console.log(arr1[0],arr1[1],arr1[2]);
+
+                    // 使用迴圈
+                    // for(let i=0;i<=arr1.length-1;i++){
+                    //     console.log(arr1[i]);
+                    // }
+
+                    // 陣列解構
+                    // const [no1,no2,no3]=arr1;
+                    // console.log(no1,no3);
+
+                    // 物件的解構加展開
+                    // const people = {
+                    //     p1: {
+                    //         name: '小叮噹',
+                    //         age: 100,
+                    //     },
+                    //     p2: {
+                    //         name: '大雄',
+                    //         age: 10,
+                    //     },
+                    //     p3: {
+                    //         name: '宜靜',
+                    //         age: 10,
+                    //     }
+                    // }
+                    // 解構p1,展開p2+p3
+                    // const {p1,...other}=people;
+                    // console.log(p1);
+                    // console.log(other);
+
+                    // 解構p3,展開p1+p2
+                    // const {p3,...other}=people;
+                    // console.log(p3);
+                    // console.log(other);
+
+                    // #解構之後重新命名
+                    let p1 = {};
+                    const {p1:小叮噹 } =people;
+                    console.log(小叮噹);
+
+                    // #函式參數解構
+                    const person={
+                        name:'小叮噹',
+                        age:10,
+                        like:'銅鑼燒'
+                    }
+                    // 一般寫法
+                    function showName(params){
+                        console.log(params);
+                        console.log();
+                    }
+                    showName(person);
+                    // 解構寫法
+                    function showName2({name}){
+                        console.log(name);
+                    }
+                    showName2(person);
+                </script>
+            </main>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</body>
+
+</html>

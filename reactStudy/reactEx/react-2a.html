@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>使用資料驅動</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="images/favicon.ico" rel="shortcut icon">
+  <meta charset="UTF-8">
+  <script src="/javascripts/vendor.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"
+    integrity="sha512-1/8Tj23BRrWnKZXeBruk6wTnsMJbi/lJsk9bsRgVwb6j5q39n0A00gFjbCTaDo5l5XrPVv4DZXftrJExhRF/Ug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="bg-lighter">
+  <div class="container main my-5">
+    <div class="row">
+      <main class="col post">
+        <!-- 章節標題 -->
+        <div class="mb-4">
+          <h1 class="mt-0 text-muted">使用資料驅動-建立版型</h1><small>檔名：<code>react-2a.html</code></small>
+        </div>
+        <!-- bootstrap card 版型 -->
+        <!-- template：https://getbootstrap.com/docs/5.2/components/card/ -->
+        <!-- bootstrap card -->
+        <div class="card" style="width: 18rem;">
+          <img src="https://unsplash.com/photos/odxB5oIG_iA" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <hr>
+        <h1>React</h1>
+
+
+        <!-- 練習開始 -->
+        <div id="root">
+          <!-- 撰寫JSX -->
+          <script type="text/babel">
+            // 建立App元件,首字一定要大寫
+            // 1.每個標籤一定要有結尾標籤,如果沒有可以自行加上/在結尾標籤前
+            // 2.class=>className
+            // 3.style行內樣式=>要使用物件寫法
+            // 4.JSX元件中註解{}
+            function App() {
+              return <div className="card" >
+                <img src="https://picsum.photos/seed/picsum/200/300" className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Card title</h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                  <a href="https://unsplash.com/s/photos/free" target='_blank' className="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            }
+            // 縮寫方式
+            ReactDOM.createRoot(document.querySelector('#root')).render(<App />);
+
+            // 傳統方式
+            // const el=document.querySelector('#root');
+            // const root=ReactDOM.createRoot(el);
+            // root.render(<App/>);
+          </script>
+        </div>
+        <!-- 練習結束 -->
+      </main>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="/stylesheets/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</body>
+
+</html>
