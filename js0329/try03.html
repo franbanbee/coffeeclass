@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //多層條件檢查(判斷)
+        //電影級數判定
+        let age=prompt("請輸入年齡","");
+        //輸入視窗按了取消鍵，回傳null值
+        if(age==null){
+            console.log("按了取消");
+        }else if(age>=0 && age<6){
+            console.log(`年齡${age}歲-->普遍級`);
+        }else if(age>6 && age<12){
+            console.log(`年齡${age}歲-->保護級`);
+        }else if(age>=12 && age<15){
+            console.log(`年齡${age}歲-->輔12級`);
+        }else if(age>=15 && age<18){
+            console.log(`年齡${age}歲-->輔15級`);
+        }else if(age>=18){
+            console.log(`年齡${age}歲-->限制級`);
+        }else{
+            //以上條件皆非
+            console.log(`年齡${age}歲-->輸入錯誤`)
+        }
+    </script>
+</body>
+</html>

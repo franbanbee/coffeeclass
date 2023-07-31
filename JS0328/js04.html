@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=1;
+        //  a=a+3;
+        a+=3;
+        console.log(a);
+        a++;  //a=a+1
+        console.log(a);
+
+        //請輸入任意二數，加法運算
+        //加號前後資料不一致，則串接資料
+        // let n1=5;
+        // 輸入視窗:prompt(字串,字串)
+        // 輸入視窗:prompt(提示語,預設值)
+        // let n2=3;
+        // let n2="3"
+
+        let n1=prompt("請輸入第一個數字","");
+        let n2=prompt("請輸入第二個數字","");
+        
+
+        let result=parseInt(n1)+ parseInt(n2);
+        console.log(result);       //8
+        console.log(n1,n2);        //5 3
+        console.log(n1,"," ,n2);   //5,3
+        console.log(typeof n1)     //number
+    </script>6
+</body>
+</html>

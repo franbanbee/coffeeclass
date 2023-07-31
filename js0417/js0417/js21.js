@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立加法運算的函式,沒有回傳值
+        // function add(n1,n2){
+        //     console.log(n1+n2);
+        // }
+
+        // add(5,3);
+        // add('我是','文字')
+
+
+        // //建立加法運算的函式,有回傳值
+        // function add(n1, n2) {
+        //     // console.log(n1+n2);
+        //     let result = n1 + n2;
+        //     return result;//結束函式且把回傳值往外丟
+        //     // return;結束函式且沒有回傳值
+        // }
+        // //呼叫加法函式
+        // let value = add(3, 5);
+        // console.log(value);
+
+        //建立兩數的四則運算 n1=5 n2=3 ope=+
+        //判斷加減乘除再運算
+        //兩數相除時值的變化
+        //無條件捨去
+        // console.log(Math.floor(123.51));
+        // //無條件進位
+        // console.log(Math.ceil(123.51));
+        // //四捨五入到整數位
+        // console.log(Math.round(123.51));
+        // //四捨五入到小數位    
+        // console.log(123.516712.tofixed(2));
+
+        //運算
+        let n1 = Number (prompt('請輸入第一個數字', ''))
+        let n2 = Number (prompt('請輸入第二個數字', ''))
+        let ope =prompt('請輸入運算符號(+,-,*,/)', '')
+        if (ope == '+') {
+            // add(n1, n2);
+            add();
+        }else if(ope == '-') {
+            // sub(n1, n2);
+            sub();
+        }else if(ope == '*') {
+            // mul(n1, n2);
+            mul();
+        }else if(ope == '/') {
+            // divide(n1, n2);
+            divide();
+        }
+
+        //函式+-*/
+        //加
+        // function add(n1, n2) {
+        //     let ans = n1 + n2;
+        //     console.log(`兩數相加為:${ans}`);
+        // }
+
+        function add() {
+            let ans = n1 + n2;
+            console.log(`兩數相加為:${ans}`);
+        }
+        
+        //減
+        // function sub(n1, n2) {
+        //     let ans = n1 - n2;
+        //     console.log(`兩數相減為:${ans}`);
+        // }
+        function sub() {
+            let ans = n1 - n2;
+            console.log(`兩數相減為:${ans}`);
+        }
+
+        //乘
+        // function mul(n1, n2) {
+        //     let ans = n1 * n2;
+        //     console.log(`兩數相乘為:${ans}`);
+        // }
+
+        function mul() {
+            let ans = n1 * n2;
+            console.log(`兩數相乘為:${ans}`);
+        }
+
+        //除
+        function divide(n1, n2) {
+            let ans = n1 / n2;
+            ans=ans.toFixed(2); //固定小數點到第二位
+            console.log(`兩數相除為:${ans}`);
+        }
+
+        function divide() {
+            let ans = n1 / n2;
+            ans=ans.toFixed(2); //固定小數點到第二位
+            console.log(`兩數相除為:${ans}`);
+        }
+
+        
+    
+    </script>
+</body>
+
+</html>

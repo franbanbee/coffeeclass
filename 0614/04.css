@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+}
+body{
+    padding: 100px 0;
+}
+.container{
+    /* width: 1200px; */
+    width: 50%;
+    margin: auto;
+}
+.item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    /* background-color: #ccc; */
+}
+.item .pic{
+    width: 55%;
+    /* 優先配置 */
+    flex-shrink: 0;
+}
+.item .pic img{
+    width: 100%;
+    vertical-align: top;
+}
+.item .txt{
+    width: 55%;
+    flex-shrink: 0;
+    padding: 50px 30px;
+    position: relative;
+    z-index: 1;
+}
+.item> :first-child{
+    margin-right: -10%;
+}
+/* 指定不同item的文字區底色 */
+.item:nth-child(1) .txt{
+    background-color: rgb(255, 192, 203,0.6);
+}
+.item:nth-child(2) .txt{
+    background-color: rgb(192, 221, 255,0.6);
+}

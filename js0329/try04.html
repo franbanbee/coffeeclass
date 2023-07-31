@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //精簡後
+
+        //多層判斷--> switch
+    
+        //血型判斷
+        let blood = prompt("請輸入血型", "");
+        if(blood==""){
+            console.log("取消輸入");
+        }else{
+            let result = "" ; //result
+        switch (blood.toUpperCase()) {  //將血型轉成大寫
+            case null:
+                alert("取消輸入")
+            case "A":
+                result = "A型"
+                break; //中斷執行，直接跳出到witch結尾 
+            case "B":
+                result = "B型"
+                break;
+            case "O":
+                result = "O型"
+                break;
+            case "AB":
+                result = "AB型"
+                break;
+            default:
+            result = "血型輸入錯誤"
+        }
+        console.log(`血型-->${result}`)
+        }
+    </script>
+    <script>
+        //多層判斷--> switch
+        //血型判斷
+        let =blood = prompt("請輸入血型", "")
+        // console.log(blood);
+        // console.log(blood.toUpperCase())
+
+        let r = ""
+        switch (blood.toUpperCase()) {  //將血型轉成大寫
+            case null:
+                alert("取消輸入")
+            // case "a": 
+            case "A":
+                //console.log(`血型-->${blood}`);
+                result = "A型"
+                break; //中斷執行，直接跳出到witch結尾
+            // case "b": 
+            case "B":
+                //console.log(`血型-->${blood}`);
+                result = "B型"
+                break;
+            // case "o": 
+            case "O":
+                //console.log(`血型-->${blood}`);
+                result = "O型"
+                break;
+            // case "aB": 
+            case "AB":
+                // case "ab": 
+                // case "Ab":
+                //console.log(`血型-->${blood}`);
+                result = "AB型"
+                break;
+            default:
+                //以上條件皆非
+                result = "血型輸入錯誤"
+        }
+        console.log(`血型-->${result}`)
+    </script>
+</body>
+
+</html>

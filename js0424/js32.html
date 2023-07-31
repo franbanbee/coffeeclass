@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <script src="./jquery/js/jquery-1.11.3.min.js"></script>
+    <script>
+        // 使用animate()方法製作互動效果
+        $(function () {
+            $('.fadeBtn').hover(function () {
+                // 滑鼠碰到時,背景色刷淡且文字放大
+                $('.fadeBtn').stop().animate({
+                    opacity:'0.5',//加上透明度 刷淡
+                    fontSize:'2rem',
+                });
+            }, function () {
+                // 滑鼠離開時,還原色彩與原文字大小
+                $('.fadeBtn').stop().animate({
+                    opacity:'1',//加上透明度 刷淡
+                    fontSize:'1.5rem',
+                });
+            });
+
+        });
+    </script>
+    <style>
+        a {
+            /* 移除超連結 */
+            text-decoration: none;
+        }
+
+        .fadeBtn {
+            width: 200px;
+            height: 70px;
+            display: block;
+            background-color: beige;
+            color: #666;
+            text-align: center;
+            line-height: 70px;
+            /*垂直置中*/
+            font-size: 1.5rem;
+            /*放大幾倍*/
+            border: solid 1px #FFF;
+            border-radius: 5px;
+            /* 陰影效果 */
+            /* 水平位置:垂直位置:尺寸:顏色 */
+            /* 四個邊都有陰影 都設為0 */
+            /* 可以調位置 右下左上等 ex.-10px */
+            box-shadow: 0 0 3px #555;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- 建立一個超連結按鈕 -->
+    <!-- 空連結1.(javascript:;)不會改變網址的原樣 -->
+    <!-- 空連結2.(#) 網址後會多一個# -->
+    <a href="#" class="fadeBtn">按鈕</a>
+
+</body>
+
+</html>

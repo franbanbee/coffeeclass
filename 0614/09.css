@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+/* 預留解除浮動 */
+.container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    clear: both;
+}
+
+.timeline {
+    padding: 100px 0 200px;
+}
+
+.timeline li {
+    width: 50%;
+    padding: 20px 0;
+    position: relative;
+    box-sizing: border-box;
+    /* border: solid 5px rgb(177, 180, 233,0.6) ; */
+}
+
+/* odd奇數 even偶數 */
+.timeline li:nth-child(odd) {
+    float: left;
+    padding-right: 100px;
+}
+
+.timeline li:nth-child(even) {
+    float: right;
+    padding-left: 100px;
+    /* 向下移動li高度的50% */
+    transform: translateY(50%);
+}
+
+/* li奇數右邊的垂直線 */
+.timeline li:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgb(177, 180, 233, 0.6);
+    z-index: -1;
+    /* border: solid px rgb(177, 180, 233,0.6) ; */
+}
+
+.timeline li:last-child::after {
+    content: "";
+    height: 50%;
+    /* border: solid px rgb(177, 180, 233,0.6) ; */
+}
+
+/* 產生圓點 */
+.timeline li::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(71, 75, 161, 0.6);
+    /* top 0 bottom 0 上下都要 置中 */
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+/* 左圓點的位置*/
+.timeline li:nth-child(odd)::before {
+    content: "";
+    right: -10px;
+}
+
+/* 右圓點的位置*/
+.timeline li:nth-child(even)::before {
+    content: "";
+    left: -10px;
+}
+
+.timeline a {
+    display: block;
+    text-decoration: none;
+    color: rgb(177, 180, 233);
+    background-color: rgba(202, 204, 240,0.6);
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 1px #aaa;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #888;
+}
+
+.timeline a:hover h2,
+.timeline a:hover p {
+    color: #fff;
+    background-color: rgba(26, 30, 95, 0.6);
+}
+
+.timeline h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: rgba(71, 75, 161, 0.6);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.timeline li:nth-child(odd) h2::after{
+    right: 0;
+}

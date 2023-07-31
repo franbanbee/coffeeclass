@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //變數名稱字與字之間不能有"空白或-"，可以有"底線_"
+        //帳號輸入
+        let user_id = prompt("請輸入帳號", "")
+        //密碼輸入
+        let user_pw = prompt("請輸入密碼", "")
+
+        //多層判斷    
+        if (user_id == "Admin" && user_pw == "1234") {
+            alert("OK")
+        } else if (user_id == "Admin" && user_pw != "1234") {
+            alert("密碼err")
+        } else if (user_id != "Admin" && user_pw == "1234") {
+            alert("帳號err")
+        } else if (user_id != "Admin" && user_pw != "1234") {
+            alert("帳密err")
+        }
+        /*
+        if(user_id=="Admin"&& user_pw=="1234" ){
+            alert("OK")
+        }
+        if(user_id=="Admin"&& user_pw!="1234" ){
+            alert("密碼err")
+        }
+        if(user_id!="Admin"&& user_pw=="1234" ){
+            alert("帳號err")
+        }
+        if(user_id!="Admin"&& user_pw!="1234" ){
+            alert("帳密err")
+        }
+        */
+
+
+    </script>
+</body>
+</html>

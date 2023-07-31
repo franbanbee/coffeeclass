@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //請使用輸入視窗輸入分數後顯示出來，但有效分數為:0-100，判斷是否及格
+        //let result=parseInt(a)  有+號才用(才有影響)
+        let msg = ""; //顯示彈出訊息
+        let a = prompt("請輸入分數", "");
+        //console.log(a == "")
+        if (a == "") {
+            // alert("err-- >沒有輸入分數")
+            msg = "err-- >沒有輸入分數";
+        } else {
+            if (a < 0 || a > 100) {
+                //err
+                // alert("err")
+                msg = "err-- >有效分數為0-100";
+            } 
+                if (a >= 60) {
+                    //及格
+                    // alert("及格")
+                    msg = "及格";
+                } else {
+                    //不及格
+                    // alert("不及格")
+                    msg = "不及格";
+                }
+           } 
+    </script>
+</body>
+
+</html>

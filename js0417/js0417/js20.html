@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //建立函式，函式中的區塊的程式不會馬上執行
+        // function sayhi() {
+        //     // console.log("hi");
+        //     return 'hello';
+        // }
+        // //呼叫函式時才會執行函式
+        // //value 加回傳值
+        // //return 回傳值
+        // let value = sayhi();
+        // console.log(value);
+        // sayhi();
+
+
+        //單一參數的函式
+        function show(msg) {
+            console.log(msg);
+        }
+
+        show("你好");
+        show("aloha");
+
+        //建立兩個參數的函式
+        function show(msg, err) {
+            console.log('msg'+msg);
+            console.log('err'+err);
+
+            if (err == 1) {
+                console.log("結果"+"msg" + ",帳號錯誤");
+            } else if (err == 2) {
+                console.log("結果"+"msg" + ",密碼錯誤");
+            } else if (err == 3) {
+                console.log("結果"+"msg" + ",帳號密碼錯誤");
+            }
+        }
+        show("登入作業", 2);
+        show('',1);
+
+        
+
+    </script>
+</body>
+
+</html>

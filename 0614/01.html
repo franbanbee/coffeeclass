@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01圖文滿版</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+        @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .banner{
+            /* 滿版設定 %是依據內容比例 */
+            width: 100%;
+            height: 100vh;
+            background-color: #ccc;
+            /* 用線性去改成右邊半透明  115度變成斜角*/
+            background: linear-gradient(115deg,#7bf 50%,transparent 50%) center center / 100% 100%,url("https://picsum.photos/id/13/1920/1080") right center / auto 100%;
+        }
+        .container{
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            /* border: solid 1px red; */
+        }
+        .banner-txt{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .banner-txt h1{
+            font-size: 4rem;
+            border: 1px solid #000;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.3em;
+        }
+        .banner-txt h1 small{
+            display: block;
+            font-size: 3rem;
+        }
+        .banner-txt h2{
+            font-size: 3rem;
+        }
+        .banner-txt p{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+<div class="banner">
+    <div class="container">
+        <div class="banner-txt">
+            <h1>圖文滿版 <br>
+                <small>Lorem ipsum dolor sit amet.</small>
+            </h1>
+            <!-- <small>主標內容主標內容主標內容主標內容</small> -->
+            <h2>副標題</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, doloribus!</p>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>

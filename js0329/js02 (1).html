@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 流程控制 -->
+    <script>
+        //程式區塊，用大括號{}包起來的程式碼
+        /*
+        {
+            console.log("Hi");
+            //輸出視窗:alert(任意字或變數);
+            alert("午安");
+            let a="晚安"
+            alert(a);
+        }
+        */
+
+        //if判斷式
+        //語法
+        /*
+        if(條件式){
+            //程式敘述
+        }
+        */
+
+        //成績是否及格
+        let score = 99;
+        //原本JS的寫法(舊的)
+        //let str1 = "您的分數為" + score + "分-->";
+        //ES6=>字串字面直樣板(新的寫法)使用反引號``包起來，變數用${變數名}方式
+        let str1=`分數為${score}分-->`;
+
+        let str2 = "";
+        if (score >= 60) {
+            //console.log("及格");
+            //您的分數為90分-->及格
+            str2 = "及格";
+            //console.log(str1+"及格");
+        }
+        else {
+            str2 = "不及格";
+            //console.log(str1+"不及格");
+        }
+        console.log(str1+str2)
+
+        
+    </script>
+</body>
+
+</html>
