@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>其餘運算</title>
+</head>
+
+<body>
+    1.其餘運算/目前用到前兩個值.其他等一下用 <br>
+    1.1符號為三個點...<br>
+    1.2將剩餘的資料.包起來放在一個變數/參數中<br>
+    <p></p>
+    2.搭配解構賦值使用<br>
+    2.1陣列的解構賦值使用<br>
+    2.2物件的解構賦值使用<br>
+    2.3必須放最後<br>
+    <p></p>
+    3.搭配函式參數使用<br>
+    3.1額外稱為其餘參數<br>
+    3.2可用來支援不..<br>
+
+    <hr>
+    <script>
+        let arr1 = [1, 2, 3, 4, 5];
+        // 解構賦值作法
+        let [n1, n2, n3, n4, n5]=arr1;
+        console.log(arr1);
+        console.log(n1, n2, n3, n4, n5);
+        // 解構賦值+其餘運算符號作法
+        let [a1,a2,...deta]=arr1;
+        console.log('deta=>'+deta);
+        //限制:必須放在最後面
+        let arr2=['a','b','c','d','e'];
+        let [d1,...deta2]=arr2;
+        console.log(deta2);
+    </script>
+
+
+</body>
+
+</html>

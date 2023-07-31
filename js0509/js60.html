@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 物件的解構賦值+其餘值 -->
+
+    <script>
+        // 1.依照訊取的物件成員
+        // let{x,y,...obj}={x:3,y:4,z:5,a:1,b:2};  
+        // console.log(x,y);
+        // console.log(obj); 
+
+
+        // 2.依照指定物件取得成員
+        // 拿自己要的值 其他放其餘值obj內 可以跳順序
+        let { x, z, ...obj } = { x: 3, y: 4, z: 5, a: 1, b: 2 };
+        console.log(z, x);
+        console.log(obj); 
+    </script>
+</body>
+
+</html>

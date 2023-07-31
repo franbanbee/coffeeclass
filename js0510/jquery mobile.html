@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery mobile</title>
+    <!-- jquery mobile css -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+    <!-- jquery 主程式 -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- jquery mobile主程式 -->
+    <script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+    <style>
+        .price {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 首頁的頁面 -->
+    <div data-role="page" id="index">
+        <div data-role="header">
+            <h1>INDEX</h1>
+        </div>
+        <div data-rol="content">
+            <!-- 放一張圖 -->
+            <img src="file3_20230222165904_223_OHCPV.jpg" alt="" width="100%">
+            <!-- 外送電話 -->
+            <a href="tel:0912345678" data-role="button">外送電話:0912345678</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <!-- ul>(li>a)*3 -->
+                </ul>
+                <ul>
+                    <li><a href="#index" data-icon="home">首頁</a></li>
+                    <li><a href="#menu" data-icon="grid">商品</a></li>
+                    <li> <a href="#about" data-icon="info">關於</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 商品的頁面 -->
+    <div data-role="page" id="menu">
+        <div data-role="header">
+            <h1>MENU</h1>
+        </div>
+        <div data-rol="content">
+            <!-- 產生列表 / 產生圓角 / 產生篩選 -->
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <!-- 將內容靠又對齊 -->
+                <!-- 可以同時多個類別 用空白隔開 -->
+                <li>品項 <p class="ui-li-aside price"> 價格</p>
+                </li>
+                <!-- 冰 -->
+                <!-- 分類標題 藍色區塊 -->
+                <li data-role="list-divider">冷飲</li>
+                <li>冰美式<p class="ui-li-aside price" >$45</p>
+                </li>
+                <li>冰拿鐵 <p class="ui-li-aside price">$55</p>
+                </li>
+                <li>冰紅茶拿鐵<p class="ui-li-aside price" >$65</p>
+                </li>
+                <!-- 熱 -->
+                <li data-role="list-divider">熱飲</li>
+                <li>熱美式<p class="ui-li-aside price" >$50</p>
+                </li>
+                <li>熱拿鐵 <p class="ui-li-aside price">$60</p>
+                </li>
+                <li>熱紅茶拿鐵<p class="ui-li-aside price" >$70</p>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <!-- ul>(li>a)*3 -->
+                </ul>
+                <ul>
+                    <li><a href="#index" data-icon="home">首頁</a></li>
+                    <li><a href="#menu" data-icon="grid">商品</a></li>
+                    <li> <a href="#about" data-icon="info">關於</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 關於的頁面 -->
+    <div data-role="page" id="about">
+        <div data-role="header">
+            <h1>ABOUT</h1>
+        </div>
+        <div data-rol="content">
+            <!-- YT -->
+            <iframe style="margin-bottom: 50px;" width="100%" height="315"
+                src="https://www.youtube.com/embed/eKt5FSnHzSs" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- map -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.533426700424!2d121.57355060991519!3d25.049903277713458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9959b0a981%3A0xdececa4d6c6900b8!2zY2FtYSBjYWbDqSDmnb7lsbHppZLmsrPlupc!5e0!3m2!1szh-TW!2stw!4v1683705040499!5m2!1szh-TW!2stw"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <!-- ul>(li>a)*3 -->
+                </ul>
+                <ul>
+                    <li><a href="#index" data-icon="home">首頁</a></li>
+                    <li><a href="#menu" data-icon="grid">商品</a></li>
+                    <li> <a href="#about" data-icon="info">關於</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

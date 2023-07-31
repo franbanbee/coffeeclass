@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX/XHR</title>
+</head>
+
+<body>
+    <button onclick="getDate()">取得json資料</button>
+    <div id="showData">顯示資料區</div>
+    <!-- 取出json資料的方式
+    1.確認檔或網址
+    2.建立請求連線
+    3.取得資料
+    fetch(檔案或網址).then(function(回應物件的資料){
+        console.log(回應物件的資料);
+    }); -->
+
+
+    <!-- 固定起手式
+    fetch().then(function(){
+
+    }); -->
+    <script>
+        function getDate() {
+            // 取得資料
+            fetch("./demo.json").then(function (response) {
+                return response.json();
+                console.log(response);
+            }).then(function (deta) {
+                // 已經取得資料,把資料顯示在畫面上
+                // 取得shoeGata的ID位置給ans
+                let ans = document.querySelector('#showDeta');
+                // 先清空顯示區的資料
+                ans.innerHTML="";
+                for(i=0;i<data.lengthl;i++){
+                    let name=deta[i];
+                    ans.innerHTML=ans.innerHTML+'<div>'+'品名:'+prod.prodName+'<br>價格:'+prod.prodPrice+'<br>說明:'+prod.prodDesc+'<hr>'+'<div>';
+                    
+                    }
+
+            });
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

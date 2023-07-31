@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 運用函式參數+其餘參數 -->
+    <!-- 撰寫一個可以將參數合計的函式 -->
+
+    <script>
+        //<!-- 建立函式 -->
+        function add(...nums) {
+            // console.log(n1, n2);
+            let tot =0;
+            // console.log('沒有進入迴圈的合計=>' + tot);
+            for (i = 0 ; i < nums.length; i++) {
+                tot = tot + nums[i];
+            }
+            // console.log('有進入迴圈的合計=>' + tot);
+            console.log('合計='+tot);
+        }
+        //<!-- 呼叫函式 -->
+        add();
+        add(10);
+        add(3, 4);   //7
+        add(1, 2, 3, 4); //10
+        add(9, 8, 7, 6, 5,);//35
+        add(10,9, 8, 7, 6, 5,);//45
+
+
+    </script>
+
+</body>
+
+</html>
